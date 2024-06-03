@@ -1,0 +1,128 @@
+.contianer {
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  margin: 1rem;
+  border-radius: 1rem;
+  width: 500px;
+  height: 200px;
+  color: white;
+}
+@media screen and (max-width:500px) {
+  .contianer{
+    width: 250px;
+    flex-direction: column;
+    height: 350px;
+  }
+  .bottom {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;  
+}
+.span_1{
+  display: none ;
+}
+.following{
+  padding-left: 22px;
+}
+}
+.profileImg {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: 19px;
+}
+.username {
+  text-decoration: none;
+  color: rgb(179, 179, 179);
+  font-weight: 300;
+  font-size: 16px;
+  padding: 6px 0;
+}
+.location {
+  color: rgb(179, 179, 179);
+  font-size: 16px;
+  font-weight: 300;
+}
+.bottom {
+  display: flex;
+  gap: 10px;
+}
+.follower,
+.following {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-weight: 300;
+}
+.public_repo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-weight: 300;
+}
+
+/* <div className="contianer">
+      <img src={data.avatar_url} alt="" srcset="" />
+      <div>
+        <div className="leftContainer">
+          <div className="top">
+            <div className="name">{data.name}</div>
+            <div className="username">{data.login}</div>
+            <div className="location">{data.location}</div>
+          </div>
+      <div className="public_repo">{data.public_repos}</div>
+          <div className="bottom">
+            <div className="follower">
+              <BsPeople />
+              {data.followers} followers
+            </div>
+            <span>.</span>
+            <div className="following">{data.following} following</div>
+          </div>
+      </div>
+    </div> */
+.tooltip {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px dotted black;
+  align-items: center;
+  cursor: pointer;
+}
+.tooltip .tooltiptext {
+  cursor: pointer;
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(87, 87, 87);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 15px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 125%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
